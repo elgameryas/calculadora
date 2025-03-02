@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form name="calculadora">
+    <input name="answer" value="" autocomplete="off" readonly type="textfield">
+    <br>
+    <input type="button" value="1" class="btn" onclick="document.calculadora.answer.value += 1">
+    <input type="button" value="2" class="btn" onclick="document.calculadora.answer.value += 2">
+    <input type="button" value="3" class="btn" onclick="document.calculadora.answer.value += 3">
+    <input type="button" value="+" class="operador" onclick="document.calculadora.answer.value += '+'">
+    <br>
+    <input type="button" value="4" class="btn" onclick="document.calculadora.answer.value += 4">
+    <input type="button" value="5" class="btn" onclick="document.calculadora.answer.value += 5">
+    <input type="button" value="6" class="btn" onclick="document.calculadora.answer.value += 6">
+    <input type="button" value="-" class="operador" onclick="document.calculadora.answer.value += '-'">
+    <br>
+    <input type="button" value="7" class="btn" onclick="document.calculadora.answer.value += 7">
+    <input type="button" value="8" class="btn" onclick="document.calculadora.answer.value += 8">
+    <input type="button" value="9" class="btn" onclick="document.calculadora.answer.value += 9">
+    <input type="button" value="×" class="operador" onclick="document.calculadora.answer.value += 'x'">
+    <br>
+    <input type="button" value="0" class="btn" onclick="document.calculadora.answer.value += 0">
+    <input type="reset" value="C">
+    <input type="button" value="=" class="igual" onclick="
+    const chars = {
+        'x' : '*',
+        '÷' : '/'
+    };
+    document.calculadora.answer.value = eval(document.calculadora.answer.value.replaceAll(/[x÷]/g, m => chars[m]))">
+    <input type="button" value="÷" class="operador" onclick="document.calculadora.answer.value += '÷'">
+    </form>
+</body>
+</html>
